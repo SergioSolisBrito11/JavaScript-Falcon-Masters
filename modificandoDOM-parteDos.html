@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model Parte 2</title>
+</head>
+<body>
+	<ol id="lista">
+		<li id="primero">Lorem ipsum dolor sit amet, <b>consectetur</b> adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+		<li>Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse
+		cillum proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+	</ol>
+	<script>
+		//var primerElemento = document.getElementById("primero");
+		//primerElemento.innerHTML = "Nuevo Texto <i class=\"foo\">FalconMasters</i>"
+		//primerElemento.textContent = "Nuevo Texto<i>FalconMasters</i>";//Con "textContent" es más seguro trabajar en formularios, pero este método no ejecuta código HTML a como lo hace "innerHTML"
+
+		//////////////////////////////////////////
+
+		var elemento = document.createElement("li")
+		var contenido = document.createTextNode("Nuevo Texto creado con 'createTextNode'");
+
+		elemento.appendChild(contenido);
+
+		var padre = document.getElementsByTagName("li")[0].parentNode;
+		var referencia = document.getElementsByTagName("li")[0];
+		padre.removeChild(referencia);//"removeChild" remueve o elimina el elemento que especifiquemos en el paréntesis
+		//padre.replaceChild(elemento, referencia);//"replaceChild" recibe 2 parámetros; el primero es el elemento que queremos agregar, y el segundo el que queremos eliminar
+	</script>
+	
+</body>
+</html>

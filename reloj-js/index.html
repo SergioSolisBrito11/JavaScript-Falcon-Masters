@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=decive-width, user-scable=no, initial-scale=1.0, maximun-scale=1.0, minumun-scale=1.0">
+	<title>Reloj Digital de 12 Horas - JS</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet"> 
+</head>
+
+<body><!--Inicio body-->
+		<div class="wrap"> <!--Inicio .wrap -->
+		<div class="widget"> <!--Inicio .widget -->
+			<div class="fecha"> <!--Inicio .fecha -->
+				<p id="diaSemana" class="diaSemana"></p>
+				<p id="dia" class="dia"></p> <!--.dia -->
+				<p>de </p>
+				<p id="mes" class="mes"></p> <!--.mes -->
+				<p>del </p>
+				<p id="year" class="year"></p> <!--.year -->
+			</div> <!--Fin .fecha -->
+
+			<div class="reloj"> <!--Inicio .reloj -->
+				<p id="horas" class="horas"></p> <!--.horas -->
+				<p>:</p>
+				<p id="minutos" class="minutos"></p> <!--.minutos -->
+				<p>:</p>
+				<div class="caja-segundos"> <!--Inicio .caja-segundos -->
+					<p id="ampm" class="ampm"></p> <!--.ampm -->
+					<p id="segundos" class="segundos"></p> <!--.segundos -->
+				</div> <!--Fin .caja-segundos -->
+			</div> <!--Fin .reloj -->
+		</div> <!--Fin .widget -->
+	</div> <!--Fin class="wrap"-->
+
+		<script src="js/reloj.js"></script> <!--script-->
+</body> <!--Fin body-->
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<ol id="lista">
+		<li>Soy el texto numero 1</li>
+		<li>Soy el texto numero 2</li>
+	</ol>
+	<script>
+		var elemento = document.createElement("li");
+		var contenido = document.createTextNode("Nuevo Texto");
+
+		elemento.appendChild(contenido);
+
+		var padre = document.getElementsByTagName("li")[0].parentNode;//"parentNode" para obtener el padre del elemento seleccionado
+		var primerElemento = document.getElementsByTagName("li")[1];
+		//var padre = document.getElementById("lista");
+		padre.appendChild(elemento);//Se agrega el elemento creado al final de la lista
+		padre.insertBefore(elemento, primerElemento);//"insertBefore" agrega el elemento creado al antes del parámetro indicado en "getElementsByTagName("li")[0]".
+	</script>
+</body>
+</html>

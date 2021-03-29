@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fechas</title>
+</head>
+<body>
+	<script>
+		(function(){
+
+			var fecha = new Date();
+			document.write(fecha);
+
+			console.log("Fecha:");
+
+			//Extraemos el día de la semana(0-7 empezando por Domingo)
+			console.log("día número: " + fecha.getDay() + " de la semana");
+			//Extraemos el día del mes
+			console.log("día número: " + fecha.getDate() + " de la mes");
+			//Extraemos el mes
+			console.log("mes número: " + fecha.getMonth() + " del año");
+			//Extraemos el año
+			console.log("Año: " + fecha.getFullYear());
+
+			console.log("Hora:");
+
+			//Extraemos la hora actual
+			console.log(fecha.getHours() -12 + " horas");
+			//Extraemos los minutos de la hora actual
+			console.log(fecha.getMinutes() + " minutos");
+			//Extraemos los segundos de la hora actual
+			console.log(fecha.getSeconds() + " segundos");
+		}())
+	</script>
+</body>
+</html>

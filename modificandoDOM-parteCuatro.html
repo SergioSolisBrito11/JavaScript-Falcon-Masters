@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modificando Estilos de los Elementos</title>
+	<style>
+		.thumb {
+			widht: 200px;
+			transition:300ms all ease;
+		}
+
+		.grande {
+			widht: 400px;
+		}
+
+		.titulo {
+			border: 1px solid navy;
+			background: #ccc;
+			padding: 10px;
+		}
+
+		.tituloGrande {
+			font-size:60px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="encabezado" class="titulo tituloGrande">Soy un encabezado</h1>
+
+	<script>
+		//con "encabezado.className='cualquierClase' podemos acceder a  cualquier otra clase que queramos"
+		var encabezado = document.getElementById("encabezado");
+
+		encabezado.className = encabezado.className.replace("tituloGrande","");
+
+		//con ".style" accedemos a los estilos del elemento
+		//encabezado.style.color = "#fff";
+		//encabezado.style.background = "navy";
+		//encabezado.style.paddingTop = "20px";
+
+	</script>
+</body>
+</html>

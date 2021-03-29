@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<h1 id="titulo">Título de nuestro sitio web</h1>
+	<div id="subtitulo"></div>
+	<p>1.- Lorem ipsum<b>dolor</b> sit amet, consectur, soy un párrafo, esperanza, lorem! Javascript lenguaje de programación. ARPlaner Citi-banamex etcétera</p>
+
+	<p id="segundo">2.- de programación. ARPlaner Lorem ipsum<b>banamex</b> sit amet, consectur, soy un párrafo, esperanza, lorem! PHP lenguaje  Citi- etcétera</p>
+
+	<p>3.- Estructura de datos, curso básiico de Javascript y base de datos con MySQL y otras cosas de programación. ARPlaner Lorem ipsum<b>esperanza, lorem</b> sit amet, consectur, soy un párrafo,banamex ! PHP lenguaje  Citi- etcétera</p>
+
+	<script>
+		var elementosP = document.getElementsByTagName("p");
+		var segundoParrafo = document.getElementById("segundo");
+		//CREANDO NODOS EN EL DOM
+		// 1.- Crear el elemento
+		var elemento = document.createElement("h2");
+		// 2.- Crear un nodo de texto
+		var contenido = document.createTextNode("Este es nuestro subtítulo");
+		// 3.- Añadir el nodo del texto al elemento
+		elemento.appendChild(contenido);
+		// 4.- Agregar atributos al elemento
+		elemento.setAttribute("align","center");//habias escrito "aling" puñetas,por eso no se centraba el texto
+		// 5.- Agregar el elemento al documento
+		document.getElementById("subtitulo").appendChild(elemento);
+		//document.body.appendChild(elemento);//Con esto se agrega el "Este es nuestro subtítulo" hasta el final
+	</script>
+</body>
+</html>

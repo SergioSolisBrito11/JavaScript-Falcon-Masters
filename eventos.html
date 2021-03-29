@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lann="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos</title>
+	
+</head>
+<body>
+	<h1>Eventos</h1>
+	<button id="boton">Boton</button>
+	<input type="text" id="input">
+	<script>
+		//En este capítulo aprenderemos sobre los Eventos que nos permiten ejecutar código cuando el usuario realice una acción.
+		//Tipos de Modelos de Eventos:
+		//Básico
+		//Estandard **
+		//Internet Explorer
+
+			(function(){
+			var boton = document.getElementById('boton');
+			var saludo = function(e){
+				//aregando un parámetro a la función(en este caso 'e', y usando el método 'type', nos retorna el tipo de evento que  se ejecuta)
+				console.log("Soy una función invocada por un evento! y soy de tipo: " + e.type );
+			};
+			//el evento "preventDefault" se usa en link, y evita que puedas acceder al sitio indicado por el link
+			var input = document.getElementById('input');
+
+			var focus = function(e){
+				console.log("Has activado la función'focus'! esta función es de tipo: " + e.type);
+			};
+			var saludoDos = function(e){
+				console.log("Soy otra función invocada por un evento! y me estoy ejecutando sobre un elemento: " + e.target);
+			};
+			
+			//".addEventListener(type, listener)" recibe 2 parámetros, el primero el tipo de evento y el segundo la función que se ejecutará
+			input.addEventListener("focus",focus);//tambien existe el evento "blur","change", entre muchos otros
+			boton.addEventListener("click",saludo);
+			boton.addEventListener("click",saludoDos);
+
+			//boton.removeEventListener("click",saludo);//"removeEventListener" sirve para remover Eventos
+			//boton.addEventListener("click", function(){
+				//console.log('Funciono! :D');
+			//});
+
+		}())
+	</script>
+</body>
+</html>

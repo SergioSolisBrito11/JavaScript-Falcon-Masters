@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicionales</title>
+</head>
+<body>
+	<h1>Condicionales</h1>
+	<script>
+		var nombre = "Sergio";
+		var edad = 19;
+
+		//if(nombre == "Sergio"){
+		//	document.write("Bienvenido " + nombre);
+		//}else if (edad == 18){
+			//document.write("El usuario " + nombre +" no //está registrado en el sistema");
+		//}
+
+		//if (edad >= 18 && nombre == "Sergio"){
+		//	document.write("Bienvenido, eres mayor de edad");
+		//}else if(nombre == "Pedro"){
+		//	document.write("Bienvenido " + nombre);
+		//}else {
+		//	document.write("Acceso Denegado: Eres menor de 18 //años");
+		//}
+
+		if ( edad >= 18 && nombre == "Sergio"){
+			document.write("Bienvenido " + nombre + " tu edad es " + edad + " años");
+		}else {
+			document.write("Acceso denegado. Usuario: " + nombre + " con edad: " + edad + " años");
+		}
+
+		if (edad === "19"){
+			document.write("True");
+		}else {
+			document.write("False");
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones</title>
+</head>
+<body>
+	<h1>Funciones</h1>
+	<script>
+
+		 var numeroMaximo = function( valor1, valor2 ){
+			if (valor1 > valor2){
+				return valor1;
+			}else if(valor1 < valor2){
+				return valor2;
+			}else if(valor1 == valor2){
+				return document.write("Ambos números son iguales");
+			}
+		}
+
+		document.write( numeroMaximo(54,54));//por qué me sale "undefined" cuando ambos valores son iguales?
+		//function saludo(nombre){
+		//	document.write("Hola " + nombre + "!");
+		//}
+
+		//saludo("Sergio");
+		//var suma = function(numero1, numero2){
+		//	var numero1 = numero1;
+		//	var numero2 = numero2;
+
+			//document.write(numero1 + numero2); //evitar el "document.write" dentro de una función
+		//	return numero1 + numero2;
+		//}
+
+		//document.write(suma(10,280));
+
+		//document.write("<br>");
+
+		//document.write(suma(100,275780));
+	</script>
+</body>
+</html>
